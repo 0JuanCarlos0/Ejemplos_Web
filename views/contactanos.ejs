@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Contáctanos</h1>
+        
+        <!-- Menú de navegación IDÉNTICO al index -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">UTSJR</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <a class="nav-link" href="/">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/contactanos">Contáctanos</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/usuarios">Usuarios</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
+                    <button class="btn btn-outline-primary" type="submit">Buscar</button>
+                </form>
+                </div>
+            </div>
+        </nav>
+
+        <div class="row mt-4">
+            <div class="col-md-8">
+                <h2>Formulario de Contacto</h2>
+                
+                <form id="formularioEncuesta">
+                    <!-- Información Personal -->
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre completo:</label>
+                        <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ej: Juan Pérez" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="edad" class="form-label">Edad:</label>
+                        <input type="number" id="edad" name="edad" class="form-control" placeholder="Ej: 25" min="1" max="120" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Ej: juan@ejemplo.com" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" class="form-control" placeholder="Ej: 555-123-4567">
+                    </div>
+
+                    <!-- Información Académica -->
+                    <div class="mb-3">
+                        <label for="carrera" class="form-label">Carrera de interés:</label>
+                        <select id="carrera" name="carrera" class="form-select" required>
+                            <option value="">Selecciona una carrera</option>
+                            <option value="tic">Tecnologías de la Información</option>
+                            <option value="mecatronica">Mecatrónica</option>
+                            <option value="administracion">Administración</option>
+                            <option value="contaduria">Contaduría</option>
+                            <option value="otra">Otra</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="semestre" class="form-label">Semestre:</label>
+                        <input type="number" id="semestre" name="semestre" class="form-control" placeholder="Ej: 3" min="1" max="12">
+                    </div>
+
+                    <!-- Preguntas adicionales -->
+                    <div class="mb-3">
+                        <label class="form-label">¿Cómo nos conociste?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="conocimiento" id="redesSociales" value="redes" checked>
+                            <label class="form-check-label" for="redesSociales">
+                                Redes sociales
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="conocimiento" id="amigo" value="amigo">
+                            <label class="form-check-label" for="amigo">
+                                Recomendación de amigo
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="conocimiento" id="internet" value="internet">
+                            <label class="form-check-label" for="internet">
+                                Búsqueda en internet
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Áreas de interés (puedes seleccionar varias):</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="intereses" id="programacion" value="programacion">
+                            <label class="form-check-label" for="programacion">
+                                Programación
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="intereses" id="diseno" value="diseno">
+                            <label class="form-check-label" for="diseno">
+                                Diseño
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="intereses" id="redes" value="redes">
+                            <label class="form-check-label" for="redes">
+                                Redes
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="intereses" id="bd" value="bd">
+                            <label class="form-check-label" for="bd">
+                                Bases de datos
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="comentarios" class="form-label">Comentarios adicionales:</label>
+                        <textarea id="comentarios" name="comentarios" class="form-control" rows="3" placeholder="Escribe aquí tus comentarios..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Enviar Información</button>
+                    <button type="reset" class="btn btn-secondary">Limpiar</button>
+                </form>
+
+                <!-- Resultados -->
+                <div class="mt-4">
+                    <div class="alert alert-info" id="resultadoCliente" style="display: none;">
+                        <h5>Datos capturados (Cliente):</h5>
+                        <div id="resultadosCliente"></div>
+                    </div>
+                    
+                    <div class="alert alert-success" id="resultadoServidor" style="display: none;">
+                        <h5>Respuesta del Servidor:</h5>
+                        <div id="mensajeServidor"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Información de Contacto</h5>
+                        <p class="card-text"><strong>Universidad Tecnológica de San Juan del Río</strong></p>
+                        <p class="card-text">📍 Carretera Federal 120, San Juan del Río, Qro.</p>
+                        <p class="card-text">📞 (427) 123 4567</p>
+                        <p class="card-text">✉️ contacto@utsjr.edu.mx</p>
+                        <p class="card-text">🕒 Horario: Lunes a Viernes 8:00 - 18:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById("formularioEncuesta");
+        const resultadoCliente = document.getElementById("resultadoCliente");
+        const resultadoServidor = document.getElementById("resultadoServidor");
+        const resultadosClienteDiv = document.getElementById("resultadosCliente");
+        const mensajeServidorDiv = document.getElementById("mensajeServidor");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Capturar todos los datos del formulario
+            const nombreUsuario = document.getElementById("nombre").value;
+            const edadUsuario = document.getElementById("edad").value;
+            const emailUsuario = document.getElementById("email").value;
+            const telefonoUsuario = document.getElementById("telefono").value;
+            const carreraUsuario = document.getElementById("carrera").value;
+            const semestreUsuario = document.getElementById("semestre").value;
+            
+            // Capturar radio button seleccionado
+            const conocimientoSeleccionado = document.querySelector('input[name="conocimiento"]:checked').value;
+            
+            // Capturar checkboxes seleccionados
+            const interesesSeleccionados = [];
+            document.querySelectorAll('input[name="intereses"]:checked').forEach(checkbox => {
+                interesesSeleccionados.push(checkbox.value);
+            });
+            
+            const comentariosUsuario = document.getElementById("comentarios").value;
+
+            // Almacenar en variables (para uso en el cliente)
+            const datosUsuario = {
+                nombre: nombreUsuario,
+                edad: edadUsuario,
+                email: emailUsuario,
+                telefono: telefonoUsuario,
+                carrera: carreraUsuario,
+                semestre: semestreUsuario,
+                conocimiento: conocimientoSeleccionado,
+                intereses: interesesSeleccionados,
+                comentarios: comentariosUsuario
+            };
+
+            // Mostrar resultados en cliente
+            mostrarResultadosCliente(datosUsuario);
+
+            // Enviar datos al servidor
+            enviarDatosServidor(datosUsuario);
+        });
+
+        function mostrarResultadosCliente(datos) {
+            let html = `
+                <p><strong>Nombre:</strong> ${datos.nombre}</p>
+                <p><strong>Edad:</strong> ${datos.edad} años</p>
+                <p><strong>Email:</strong> ${datos.email}</p>
+                <p><strong>Teléfono:</strong> ${datos.telefono || 'No proporcionado'}</p>
+                <p><strong>Carrera:</strong> ${obtenerNombreCarrera(datos.carrera)}</p>
+                <p><strong>Semestre:</strong> ${datos.semestre || 'No especificado'}</p>
+                <p><strong>Nos conociste por:</strong> ${obtenerNombreConocimiento(datos.conocimiento)}</p>
+                <p><strong>Intereses:</strong> ${datos.intereses.length > 0 ? datos.intereses.map(i => obtenerNombreInteres(i)).join(', ') : 'Ninguno seleccionado'}</p>
+                <p><strong>Comentarios:</strong> ${datos.comentarios || 'Sin comentarios'}</p>
+            `;
+            
+            resultadosClienteDiv.innerHTML = html;
+            resultadoCliente.style.display = "block";
+        }
+
+        function obtenerNombreCarrera(codigo) {
+            const carreras = {
+                'tic': 'Tecnologías de la Información',
+                'mecatronica': 'Mecatrónica',
+                'administracion': 'Administración',
+                'contaduria': 'Contaduría',
+                'otra': 'Otra'
+            };
+            return carreras[codigo] || 'No seleccionada';
+        }
+
+        function obtenerNombreConocimiento(codigo) {
+            const conocimientos = {
+                'redes': 'Redes sociales',
+                'amigo': 'Recomendación de amigo',
+                'internet': 'Búsqueda en internet'
+            };
+            return conocimientos[codigo] || 'No especificado';
+        }
+
+        function obtenerNombreInteres(codigo) {
+            const intereses = {
+                'programacion': 'Programación',
+                'diseno': 'Diseño',
+                'redes': 'Redes',
+                'bd': 'Bases de datos'
+            };
+            return intereses[codigo] || codigo;
+        }
+
+        function enviarDatosServidor(datos) {
+            fetch("/contactanos", {
+                method: "POST",
+                headers: { 
+                    "Content-Type": "application/json" 
+                },
+                body: JSON.stringify(datos)
+            })
+            .then(res => res.json())
+            .then(data => {
+                mensajeServidorDiv.innerHTML = `
+                    <p><strong>Estado:</strong> ${data.mensaje}</p>
+                    <p><strong>ID de registro:</strong> ${data.id || 'N/A'}</p>
+                    <p><strong>Fecha:</strong> ${new Date().toLocaleString()}</p>
+                `;
+                resultadoServidor.style.display = "block";
+                console.log("Respuesta del servidor:", data);
+            })
+            .catch(err => {
+                console.error("Error:", err);
+                mensajeServidorDiv.innerHTML = "<p>Error al conectar con el servidor</p>";
+                resultadoServidor.style.display = "block";
+            });
+        }
+    </script>
+</body>
+</html>
